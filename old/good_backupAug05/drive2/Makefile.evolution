@@ -1,0 +1,21 @@
+# this is a comment
+SRC= drive2.c
+OBJ=$(SRC:.c=.o) # replaces the .c from SRC with .o
+EXE=drive2.exe
+
+CC=gcc
+CFLAGS=-Wall -g -I C:/Webots/mingw/include -I C:/Webots/mingw/lib/gcc/mingw32/3.4.2/include -I C:/Webots/include -I ../glib-dev-2.14.5/include -I ../glib-dev-2.14.5/include/glib-2.0 -I ../glib-dev-2.14.5/lib/glib-2.0/include -DWIN32
+LDFLAGS=-mwindows -L ../glib-dev-2.14.5/lib -lController -L C:/Webots/lib
+RM=rm -f
+#replaced del with rm -f
+%.o:	%.c %.h        # combined w/ next line will compile recently changed .c files
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+.PHONY	:	all	# .PHONY ignores files named all
+all:	$(EXE)	# all is dependent on $(EXE) to be complete
+    $(EXE):	$(OBJ)	#	$(EXE) is dependent on all of the files in $(OBJ) to ex
+	$(CC) $(OBJ) $(LDFLAGS) -o $@
+
+.PHONY	:	clean	# .PHONY ignores files named clean
+clean:
+	-$(RM)	$(OBJ)	core	# '-' causes errors not to exit the process

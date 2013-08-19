@@ -1,0 +1,30 @@
+you may have to reinstall BT driver?!
+remove and add epucks each time
+Broadcom installer has been hanging for the last 4 hours, what the shit? I had to reinstall it because it wouldn't recognize the device (saying there is some driver error). 
+This bs:
+Description:
+  A problem caused this program to stop interacting with Windows.
+
+Problem signature:
+  Problem Event Name:	AppHangB1
+  Application Name:	BtwDownload.exe
+  Application Version:	12.0.0.4300
+  Application Timestamp:	50a59407
+  Hang Signature:	66cc
+  Hang Type:	6144
+  OS Version:	6.1.7601.2.1.0.256.48
+  Locale ID:	1033
+  Additional Hang Signature 1:	66cc591e686221dbdfbe96fd2e066e98
+  Additional Hang Signature 2:	0f4f
+  Additional Hang Signature 3:	0f4f5158efe35c9ee80164b72e382c3a
+  Additional Hang Signature 4:	66cc
+  Additional Hang Signature 5:	66cc591e686221dbdfbe96fd2e066e98
+  Additional Hang Signature 6:	0f4f
+  Additional Hang Signature 7:	0f4f5158efe35c9ee80164b72e382c3a
+
+Read our privacy statement online:
+  http://go.microsoft.com/fwlink/?linkid=104288&clcid=0x0409
+
+If the online privacy statement is not available, please read our privacy statement offline:
+  C:\Windows\system32\en-US\erofflps.txt
+

@@ -1,0 +1,293 @@
+#VRML_SIM V6.0 utf8
+WorldInfo {
+  info [
+    "maze"
+    "Author: Deniz Aydin (deniz.aydin@epfl.ch)"
+    "Date: 31 May 2013"
+  ]
+  title "test"
+}
+Viewpoint {
+  orientation -0.974045 -0.225871 -0.0148096 0.753186
+  position -0.598203 1.4481 1.1951
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+PointLight {
+  location 0 0.345 0
+}
+DEF GROUND Solid {
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
+      geometry Plane {
+      }
+    }
+  ]
+  name "ground"
+  boundingObject Plane {
+  }
+  locked TRUE
+}
+DEF wall1 Solid {
+  translation 0 0.025 0.495
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 1 0.05 0.01
+  }
+}
+DEF wall4 Solid {
+  translation 0 0.025 -0.495
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 1 0.05 0.01
+  }
+}
+DEF wall2 Solid {
+  translation 0.495 0.025 0
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 1 0.05 0.01
+  }
+}
+DEF wall3 Solid {
+  translation -0.495 0.025 0
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 1 0.05 0.01
+  }
+}
+DEF tm1 Solid {
+  translation 0 0.025 -0.205
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.98 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.98 0.05 0.01
+  }
+}
+DEF tm2 Solid {
+  translation 0.295 0.025 0.005
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.39 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.39 0.05 0.01
+  }
+}
+DEF tm3 Solid {
+  translation -0.295 0.025 0.005
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.39 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.39 0.05 0.01
+  }
+}
+DEF tm4 Solid {
+  translation -0.105 0.025 0.245
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.49 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.49 0.05 0.01
+  }
+}
+DEF tm5 Solid {
+  translation 0.105 0.025 0.245
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.49 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.49 0.05 0.01
+  }
+}
+DEF tm6 Solid {
+  translation 0 0.025 0.485
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.2 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.05 0.01
+  }
+}
+DEF tm7 Solid {
+  translation -0.485 0.025 -0.1
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.2 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.05 0.01
+  }
+}
+DEF tm8 Solid {
+  translation 0.485 0.025 -0.1
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 0.2 0.05 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.05 0.01
+  }
+}
+Supervisor {
+  children [
+    Receiver {
+      name "receiversupervisor"
+      channel 1
+    }
+    Emitter {
+      name "emittersupervisor"
+      channel 1
+      baudRate 115200
+    }
+  ]
+  controller "evolution"
+}
+DEF EPUCK EPuck_GPS {
+  translation -0.000370038 -3.25698e-05 -0.0124193
+  rotation 0.999744 0.0177268 -0.0140381 6.88601e-05
+  controller "e-puck_drive"
+}
+DEF reward Solid {
+  translation -0.38 0 -0.1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 0
+        }
+      }
+      geometry Plane {
+        size 0.2 0.2
+      }
+    }
+  ]
+  boundingObject Plane {
+    size 0.2 0.2
+  }
+}
