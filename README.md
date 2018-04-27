@@ -1,6 +1,6 @@
 maze
 ====
 
-Fill in this readme.
+Code for the maze navigator e-puck robot written in C. Uses a one-layer recursive neural network whose weights are evolving via an evolutionary algorithm. 
 
-deniz.aydin@epfl.ch
+Code includes the maze and the evolving neural network. 
