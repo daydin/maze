@@ -1,5 +1,5 @@
-#ifndef SUP2
-#define SUP2
+#ifndef SUPERVISOR
+#define SUPERVISOR
 
 #include <stdio.h>
 #include <time.h>
@@ -8,11 +8,11 @@
 #include <string.h>
 #include <stdbool.h>
 #include <assert.h>
-#include "../../old/2013_June/evolution/webots/robot.h"
-#include "../../old/2013_June/evolution/webots/supervisor.h"
-#include "../../old/2013_June/evolution/webots/emitter.h"
-#include "../../old/2013_June/evolution/webots/receiver.h"
-//#include "webots/node.h"
+#include "libs/webots/robot.h"
+#include "libs/webots/supervisor.h"
+#include "libs/webots/emitter.h"
+#include "libs/webots/receiver.h"
+//#include "libs/webots/node.h"
 
 //////////////////////////
 //Start Editing

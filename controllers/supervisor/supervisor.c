@@ -2,7 +2,7 @@
  * File:         evolution.c
  */
 
-#include "sup2.h"
+#include "supervisor.h"
 
 int main()
 {

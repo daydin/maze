@@ -1,11 +1,11 @@
 # this is a comment
-SRC= drive2.c
+SRC= driver.c
 OBJ=$(SRC:.c=.o) # replaces the .c from SRC with .o
-EXE=drive2.exe
+EXE=driver
 
 CC=gcc
-CFLAGS=-Wall -g -I C:/Webots/include -I C:/Webots/mingw/include -I C:/Webots/mingw/bin -I C:/Webots/mingw/lib/gcc/i686-w64-mingw32/4.7.2/include -I C:/Webots/mingw/i686-w64-mingw32/bin -I C:/Webots/mingw/libexec/gcc/i686-w64-mingw32/4.7.2 -I C:/Webots/mingw/i686-w64-mingw32/bin -I C:/Webots/include/controller/c/webots -DWIN32
-LDFLAGS=-mwindows -L ../glib-dev-2.14.5/lib -lController -L C:/Webots/lib
+CFLAGS=-Wall -g -I /usr/local/webots/include -I /usr/local/webots/include/controller/c/webots
+LDFLAGS=-g -L /usr/local/webots/lib -lController -L /lib/i386-linux-gnu/ -lm
 RM=rm -f
 #replaced del with rm -f
 %.o:	%.c %.h        # combined w/ next line will compile recently changed .c files

@@ -1,16 +1,11 @@
 # this is a comment
-SRC= sup2.c
+SRC= driver.c
 OBJ=$(SRC:.c=.o) # replaces the .c from SRC with .o
-EXE=sup2
+EXE=driver.exe
 
 CC=gcc
-CFLAGS=-Wall -g -I /usr/local/webots/include -I /usr/local/webots/include/controller/c/webots
-LDFLAGS=-g -L /usr/local/webots/lib -lController -L /lib/i386-linux-gnu/ -lm
-#CFLAGS=-Wall -g -I usr/local/webots/include -I /usr/local/webots/include/controller/c/webots -I usr/local/webots/lib
-#LDFLAGS= -L ../glib-dev-2.14.5/lib -L"usr/local/webots/lib" -llibController
-# -L"C:\Users\YourName\XYZLib\lib" -lXYZLib
-#-mwindows -L ../glib-dev-2.14.5/lib -lController -L C:/Webots/lib
-USE_QT = true
+CFLAGS=-Wall -g -I C:/Webots/include -I C:/Webots/mingw/include -I C:/Webots/mingw/bin -I C:/Webots/mingw/lib/gcc/i686-w64-mingw32/4.7.2/include -I C:/Webots/mingw/i686-w64-mingw32/bin -I C:/Webots/mingw/libexec/gcc/i686-w64-mingw32/4.7.2 -I C:/Webots/mingw/i686-w64-mingw32/bin -I C:/Webots/include/controller/c/webots -DWIN32
+LDFLAGS=-mwindows -L ../glib-dev-2.14.5/lib -lController -L C:/Webots/lib
 RM=rm -f
 #replaced del with rm -f
 %.o:	%.c %.h        # combined w/ next line will compile recently changed .c files

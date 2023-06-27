@@ -20,8 +20,8 @@
   USA.
 
  ***************************************************************************/
-#ifndef DRIVE2
-#define DRIVE2
+#ifndef DRIVER
+#define DRIVER
 
 #include <stdio.h>
 #include <time.h>
@@ -29,15 +29,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "../../old/2013_June/evolution/webots/robot.h"
-#include "../../old/2013_June/evolution/webots/differential_wheels.h"
-#include "../../old/2013_June/evolution/webots/distance_sensor.h"
-#include "../../old/2013_June/evolution/webots/led.h"
-#include "../../old/2013_June/evolution/webots/supervisor.h"
-#include "../../old/2013_June/evolution/webots/receiver.h"
-#include "../../old/2013_June/evolution/webots/emitter.h"
-#include "../../old/2013_June/evolution/webots/gps.h"
-#include "../../old/2013_June/evolution/webots/camera.h"
+#include "libs/webots/robot.h"
+#include "libs/webots/differential_wheels.h"
+#include "libs/webots/distance_sensor.h"
+#include "libs/webots/led.h"
+#include "libs/webots/supervisor.h"
+#include "libs/webots/receiver.h"
+#include "libs/webots/emitter.h"
+#include "libs/webots/gps.h"
+#include "libs/webots/camera.h"
 
 // Global defines
 #define TRUE 1
